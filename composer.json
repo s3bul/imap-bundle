@@ -1,0 +1,39 @@
+{
+    "name": "s3bul/imap-bundle",
+    "description": "PHP-IMAP Symfony integration.",
+    "version": "0.1.0",
+    "keywords": [
+        "imap",
+        "php-imap",
+        "symfony",
+        "bundle"
+    ],
+    "minimum-stability": "stable",
+    "homepage": "https://github.com/s3bul/imap-bundle",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sebastian Korzeniecki",
+            "email": "seba5zer@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "secit-pl/imap-bundle": "^1.4.0",
+        "s3bul/php-imap": "^0.1.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "S3bul\\": "src/"
+        }
+    },
+    "scripts": {
+        "safe-update": [
+            "composer update --ignore-platform-reqs"
+        ]
+    }
+}
