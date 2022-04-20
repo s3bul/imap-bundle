@@ -1,7 +1,7 @@
 {
     "name": "s3bul/imap-bundle",
     "description": "PHP-IMAP Symfony integration.",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "keywords": [
         "imap",
         "php-imap",
@@ -19,9 +19,9 @@
         }
     ],
     "require": {
-        "php": ">=7.2.0",
-        "secit-pl/imap-bundle": "^1.4.0",
-        "s3bul/php-imap": "^0.1.0"
+        "php": ">=7.4.0",
+        "secit-pl/imap-bundle": "^1.5.2",
+        "s3bul/php-imap": "^1.0.0"
     },
     "config": {
         "sort-packages": true

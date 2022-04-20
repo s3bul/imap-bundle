@@ -34,15 +34,19 @@ class Imap extends BaseImap
         $config = $this->connections[$name];
 
         if(isset($config['attachments_dir'])) {
-            $this->checkAttachmentsDir($config['attachments_dir']);
+            $this->checkAttachmentsDir(
+                $config['attachments_dir'],
+                $config['create_attachments_dir_if_not_exists'],
+                $config['created_attachments_dir_permissions']
+            );
         }
 
         return new Mailbox(
             $config['mailbox'],
             $config['username'],
             $config['password'],
-            isset($config['attachments_dir']) ? $config['attachments_dir'] : null,
-            isset($config['server_encoding']) ? $config['server_encoding'] : 'UTF-8'
+            $config['attachments_dir'] ?? null,
+            $config['server_encoding'] ?? 'UTF-8'
         );
     }
 
